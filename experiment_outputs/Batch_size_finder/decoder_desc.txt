@@ -1,0 +1,14 @@
+DESCRIPTION: 
+None  
+
+Decoder(
+  (rnn): GRU(128, 128, batch_first=True)
+  (linear): Sequential(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=2, bias=True)
+  )
+  (attn): Linear(in_features=256, out_features=512, bias=True)
+  (attn_combine): Linear(in_features=256, out_features=128, bias=True)
+  (sigmoid): Softmax(dim=1)
+)

@@ -1,0 +1,4 @@
+				PRED 0 	 PRED 1
+ACUTAL 0 	 125331.0 	 65760.0
+ACTUAL 1 	 54675.0 	 88058.0
+Final Accuracy: 68.971

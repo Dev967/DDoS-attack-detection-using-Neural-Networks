@@ -1,0 +1,85 @@
+Encoder - Decoder Architecture
+
+### ENCODER ###
+-- RNN --
+Layer: 1
+Hidden Size: 128
+RNN: GRU
+Num Features: 33
+IP Embedding: 256
+Port Embedding: 70000
+
+Encoder -> Encoder_Outputs, Hidden
+Encoder_Outputs, Hidden -> Decoder -> Attention + Generative RNN -> Linear
+
+### DECODER ###
+--- RNN ---
+Layer: 1
+Hidden Size: 128
+RNN: GRU
+Num Features: 128
+Linear: Sequential(128 -> 50 -> ReLU -> 2)
+Attn: Linear(128*2 -> 64)
+Attn_Combine: Linear(128 * 2, 128)
+Sigmoid: Softmax()
+
+
+### VALIDATION ###
+--- SESSION 4 (141248) ---
+NOTE: Session - 4 is completely unseen data not used in either training or testing, with completely different Benign, Target and Attack machine IP's
+0 = 59229
+1 = 82067
+				PRED 0 	 PRED 1
+ACTUAL 0 	  51712  	  7479
+ACTUAL 1 	  3786  	  78271
+
+ Accuracy: 129983/141248  [92.02466583251953]
+
+--- SESSION - 4 Untrimmed () ---
+0 = 89229
+1 = 82067
+
+				PRED 0 	 PRED 1
+ACTUAL 0 	  81632  	  7567
+ACTUAL 1 	  3759  	     78306
+
+Accuracy: 159938/171264  [93.3868179321289]
+
+
+--- SESSION - 3 (60480) ---
+0 = 50663
+1 = 9880
+NOTE: Session - 3 is completely unseen data not used in either training or testing, with completely different Benign, Target and Attack machine IP's
+
+				PRED 0 	 PRED 1
+ACTUAL 0 	  50172  	  460
+ACTUAL 1 	  323  	     9525
+
+ Accuracy: 59697/60480  [98.70536041259766]
+
+--- SESSION - 2 (10368) ---
+0 = 10424
+1 = 0
+NOTE: Session - 2 is completely unseen data not used in either training or testing, with completely different Benign, Target and Attack machine IP's
+
+				PRED 0 	 PRED 1
+ACTUAL 0 	  10368  	  0
+ACTUAL 1 	  0  	     0
+
+ Accuracy: 10368/10368  [100.0]
+
+--- SESSION - 1 (121728) ---
+0 = 70956
+1 = 50828
+
+NOTE: Session - 1 was used for training
+
+				PRED 0 	 PRED 1
+ACTUAL 0 	  66983  	  3917
+ACTUAL 1 	  2825  	     48003
+
+ Accuracy: 114986/121728  [94.46142578125]
+
+### SUMMARY ###
+The Training Accuracy is far lower than compared to Validation Accuracy, i suspect it is due to large size of dataset
+Training dataset is the largest of the three

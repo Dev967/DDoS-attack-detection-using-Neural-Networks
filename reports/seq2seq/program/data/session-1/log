@@ -1,0 +1,23 @@
+#LOG -- DEC 30 2022
+
+22:00 IST -- server started
+
+BENIGN MACHINES:
+15.207.71.14		172.31.7.165
+52.66.182.1		172.31.11.37
+3.109.121.159		172.31.14.92
+13.232.39.206		172.31.9.78
+3.7.45.223		172.31.10.47
+
+TARGET MACHINES:
+13.232.206.46		172.31.2.36
+ 
+22:30 -- SYN Flood Attack started
+effects were immidiately visible, the respaonses from server keep getting slower
+the experiment kept continouing until the requests were timed out
+
+22:37 -- Attack stopped
+
+the requests were stil delayed
+
+22:40 -- all processes stopped

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    margin: 10rem;
+}
+
+p{
+    color: white;
+}
+a{
+            border: 2px solid white; 
+            border-radius: 5px;
+            min-width: 6rem;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem;
+        }

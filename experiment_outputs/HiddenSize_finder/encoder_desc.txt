@@ -1,0 +1,8 @@
+DESCRIPTION: 
+ None 
+
+Encoder(
+  (rnn): GRU(33, 768, batch_first=True)
+  (ip_embedding): Embedding(256, 1)
+  (port_embedding): Embedding(70000, 4)
+)

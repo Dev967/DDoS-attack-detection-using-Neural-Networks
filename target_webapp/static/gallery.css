@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    margin: 3rem;
+    object-fit: cover;
+    object-position: center;
+    width: 40vw;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px black;
+} 
+a{
+            border: 2px solid white; 
+            border-radius: 5px;
+            min-width: 6rem;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem;
+        }

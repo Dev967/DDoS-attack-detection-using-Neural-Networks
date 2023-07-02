@@ -1,0 +1,9 @@
+DESCRIPTION: 
+ None 
+
+Encoder(
+  (activation): ReLU()
+  (rnn): GRU(33, 128, num_layers=2, batch_first=True, dropout=0.9)
+  (ip_embedding): Embedding(256, 1)
+  (port_embedding): Embedding(70000, 4)
+)

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: #111;
+        }
+        a{
+            border: 2px solid white; 
+            border-radius: 5px;
+            min-width: 6rem;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+<nav style="width: 100vw; height: 10vh;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <a href="index.html">Home</a>
+        <a href="/login.html">Login</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/about.html">About</a>
+    </div>
+</nav>
+<div style="height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center;">
+    <div style="padding: 3rem; border: 2px solid white; border-radius: 5px;">
+        <h1 style="color:white">{{ message }}</h1>
+    </div>
+</div>
+</body>
+</html>
